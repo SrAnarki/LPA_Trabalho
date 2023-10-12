@@ -16,6 +16,7 @@ class Menu:
     def run(self, ):
         pygame.mixer_music.load('./Assets/Menu.mp3')
         pygame.mixer_music.play(-1)
+        pygame.mixer_music.set_volume(0.05)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Less", (64, 0, 128), ((WIN_WIDTH / 2), 80))
