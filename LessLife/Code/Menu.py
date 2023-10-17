@@ -20,6 +20,7 @@ class Menu:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Less", (64, 0, 128), ((WIN_WIDTH / 2), 80))
+            self.menu_text(50, "Life", (64, 0, 128), ((WIN_WIDTH / 2), 130))
             pygame.display.flip()
         pass
 
