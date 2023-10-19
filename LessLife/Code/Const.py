@@ -16,4 +16,5 @@ WIN_HEIGHT = 648
 # E
 ENTITY_SPEED = {'Level1Bg0': 1.2,
                 'Level1Bg1': 2,
-                'Level1Bg2': 3}
+                'Level1Bg2': 3,
+                'Player1': 6}
