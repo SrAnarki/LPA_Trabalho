@@ -39,12 +39,12 @@ class Menu:
                     pygame.quit()
                     sys.exit()
                 if event.type == pygame.KEYDOWN:  # testa se alguma tecla foi pressionada
-                    if event.key == pygame.K_DOWN:  # se a tecla para baixo foi pressionada
+                    if event.key == pygame.K_s:  # se a tecla para baixo foi pressionada
                         if menu_option < len(MENU_OPTION) - 1:
                             menu_option += 1
                         else:
                             menu_option = 0
-                    if event.key == pygame.K_UP:  # se a tecla para cima foi pressionada
+                    if event.key == pygame.K_w:  # se a tecla para cima foi pressionada
                         if menu_option > 0:
                             menu_option -= 1
                         else:

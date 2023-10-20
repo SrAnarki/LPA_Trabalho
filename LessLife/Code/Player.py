@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 import pygame
 
-from Code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH
+from Code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_RIGHT, \
+    PLAYER_KEY_LEFT
 from Code.Entity import Entity
 
 
@@ -12,14 +13,14 @@ class Player(Entity):
 
     def move(self, ):
         pressed_key = pygame.key.get_pressed()
-        if pressed_key[pygame.K_w] and self.rect.top > 2:  # Se a tecla 'W' foi pressionada
+        if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 2:  # Se a tecla 'W' foi pressionada
             self.rect.centery -= ENTITY_SPEED[self.name]
 
-        if pressed_key[pygame.K_s] and self.rect.bottom < WIN_HEIGHT:  # Se a tecla 'S' foi pressionada
+        if pressed_key[PLAYER_KEY_DOWN[self.name]] and self.rect.bottom < WIN_HEIGHT:  # Se a tecla 'S' foi pressionada
             self.rect.centery += ENTITY_SPEED[self.name]
 
-        if pressed_key[pygame.K_d] and self.rect.right < WIN_WIDTH:  # Se a tecla 'D' foi pressionada
+        if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right < WIN_WIDTH:  # Se a tecla 'D' foi pressionada
             self.rect.centerx += ENTITY_SPEED[self.name]
 
-        if pressed_key[pygame.K_a] and self.rect.left > 0:  # Se a tecla 'A' foi pressionada
+        if pressed_key[PLAYER_KEY_LEFT[self.name]] and self.rect.left > 0:  # Se a tecla 'A' foi pressionada
             self.rect.centerx -= ENTITY_SPEED[self.name]
